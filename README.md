@@ -48,4 +48,4 @@ To build strong fundamentals in Data Structures and Algorithms.
 19. Pair Sum Closest to Zero
 20. Count Subarrays with Sum Zero
 21. Traverse Singly Linked List
-22. 
+22. Count Nodes in Linked List
