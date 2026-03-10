@@ -49,3 +49,6 @@ To build strong fundamentals in Data Structures and Algorithms.
 20. Count Subarrays with Sum Zero
 21. Traverse Singly Linked List
 22. Count Nodes in Linked List
+23. Merge two Sorted linked list
+24. Delete first occurrence of linked list
+25. 
