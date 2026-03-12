@@ -47,9 +47,10 @@ To build strong fundamentals in Data Structures and Algorithms.
 18. Rotate array by k position
 19. Pair Sum Closest to Zero
 20. Count Subarrays with Sum Zero
-21. Traverse Singly Linked List
+21. Create and Traverse Singly Linked List
 22. Count Nodes in Linked List
 23. Merge two Sorted linked list
 24. Delete first occurrence of linked list
 25. count occurrence of element in linked list
-26. 
+26. Create and Traverse doubly linked list
+
