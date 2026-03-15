@@ -37,6 +37,8 @@ struct node* createnode(int value)
 
     newnode->data = value;
     newnode->next= NULL;
+
+    return newnode;
 }
 
 void insertatend(int value){
