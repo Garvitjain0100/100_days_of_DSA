@@ -56,4 +56,5 @@ To build strong fundamentals in Data Structures and Algorithms.
 27. Find the intersection point from two linked list
 28. Create and traverse circular linked list
 29. Rotate Linked List Right by k Places
+30. create a polynomial using linked list
 
