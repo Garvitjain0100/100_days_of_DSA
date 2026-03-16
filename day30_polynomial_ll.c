@@ -84,7 +84,7 @@ int main () {
     printf("Enter the number of node for polynomial linked list:");
     scanf("%d",&n);
 
-    printf("Enter the polynomial term one by one:");
+    printf("Enter the polynomial term one by one:\n");
     for (int i = 0; i < n; i++) {
         printf("Enter coefficient and exponent respectively for %d term of polynomial:",i+1);
         scanf("%d %d",&coef,&expo);
