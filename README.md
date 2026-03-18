@@ -57,4 +57,5 @@ To build strong fundamentals in Data Structures and Algorithms.
 28. Create and traverse circular linked list
 29. Rotate Linked List Right by k Places
 30. create a polynomial using linked list
+31. Stack implementation using array
 
