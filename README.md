@@ -58,4 +58,5 @@ To build strong fundamentals in Data Structures and Algorithms.
 29. Rotate Linked List Right by k Places
 30. create a polynomial using linked list
 31. Stack implementation using array
+32. Push and Pop in Stack
 
