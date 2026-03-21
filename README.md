@@ -59,4 +59,6 @@ To build strong fundamentals in Data Structures and Algorithms.
 30. create a polynomial using linked list
 31. Stack implementation using array
 32. Push and Pop in Stack
+33. Infix to Postfix Conversion using stack
+34. 
 
