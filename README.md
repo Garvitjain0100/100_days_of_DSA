@@ -61,4 +61,5 @@ To build strong fundamentals in Data Structures and Algorithms.
 32. Push and Pop in Stack
 33. Infix to Postfix Conversion using stack
 34. Evaluate Postfix Expression
+35. queue using array
 
