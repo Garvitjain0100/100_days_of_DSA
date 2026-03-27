@@ -20,3 +20,68 @@ Output:
 Explanation:
 Use array and front/rear pointers. Rear wraps around to start after reaching array end. Dequeue removes elements from front. 
 Display remaining elements in correct order. */
+#include <stdio.h>
+
+#define MAX 100
+
+int queue[MAX];
+int front = -1, rear = -1;
+
+void enqueue(int value) {
+    if ((rear + 1) % MAX == front) return;
+
+    if (front == -1) front = 0;
+
+    rear = (rear + 1) % MAX;
+    queue[rear] = value;
+}
+
+int dequeue() {
+    if (front == -1) return -1;
+
+    int value = queue[front];
+
+    if (front == rear) {
+        front = rear = -1;
+    } else {
+        front = (front + 1) % MAX;
+    }
+
+    return value;
+}
+
+void display() {
+    if (front == -1) return;
+
+    int i = front;
+    while (1) {
+        printf("%d ", queue[i]);
+        if (i == rear) break;
+        i = (i + 1) % MAX;
+    }
+}
+
+int main() {
+    int n, m, x;
+
+    printf("Enter no of element for circular queue:");
+    scanf("%d", &n);
+
+    printf("Enter %d element for Circular queue:",n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &x);
+        enqueue(x);
+    }
+
+    printf("Enter index for rotation of circular queue:");
+    scanf("%d", &m);
+
+    for (int i = 0; i < m; i++) {
+        int val = dequeue();
+        enqueue(val);
+    }
+
+    display();
+
+    return 0;
+}
