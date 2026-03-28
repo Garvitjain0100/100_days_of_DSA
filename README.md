@@ -63,4 +63,5 @@ To build strong fundamentals in Data Structures and Algorithms.
 34. Evaluate Postfix Expression
 35. queue using array
 36. Circular Queue Using Array
+37. Priority Queue using Array
 
