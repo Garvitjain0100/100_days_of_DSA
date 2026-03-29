@@ -28,3 +28,7 @@ Output:
 20 */
 
 #include<stdio.h>
+#include<ctype.h>
+#define MAX 100
+
+int queue[MAX];
