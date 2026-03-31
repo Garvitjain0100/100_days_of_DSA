@@ -33,3 +33,174 @@ Input:
 
 Output:
 - Results of operations such as front, back, size, or the final state of the deque after all operations */
+
+#include <stdio.h>
+
+#define MAX 5
+
+int deque[MAX];
+int front = -1, rear = -1;
+
+int isFull() {
+    return (front == (rear + 1) % MAX);
+}
+
+int isEmpty() {
+    return (front == -1);
+}
+
+void push_front(int x) {
+    if (isFull()) {
+        printf("Deque Overflow\n");
+        return;
+    }
+
+    if (isEmpty()) {
+        front = rear = 0;
+    } else {
+        front = (front - 1 + MAX) % MAX;
+    }
+
+    deque[front] = x;
+    printf("Inserted at front: %d\n", x);
+}
+
+void push_back(int x) {
+    if (isFull()) {
+        printf("Deque Overflow\n");
+        return;
+    }
+
+    if (isEmpty()) {
+        front = rear = 0;
+    } else {
+        rear = (rear + 1) % MAX;
+    }
+
+    deque[rear] = x;
+    printf("Inserted at rear: %d\n", x);
+}
+
+void pop_front() {
+    if (isEmpty()) {
+        printf("Deque Underflow\n");
+        return;
+    }
+
+    printf("Removed from front: %d\n", deque[front]);
+
+    if (front == rear) {
+        front = rear = -1;
+    } else {
+        front = (front + 1) % MAX;
+    }
+}
+
+void pop_back() {
+    if (isEmpty()) {
+        printf("Deque Underflow\n");
+        return;
+    }
+
+    printf("Removed from rear: %d\n", deque[rear]);
+
+    if (front == rear) {
+        front = rear = -1;
+    } else {
+        rear = (rear - 1 + MAX) % MAX;
+    }
+}
+
+void get_front() {
+    if (isEmpty()) {
+        printf("-1\n");
+    } else {
+        printf("Front: %d\n", deque[front]);
+    }
+}
+
+void get_rear() {
+    if (isEmpty()) {
+        printf("-1\n");
+    } else {
+        printf("Rear: %d\n", deque[rear]);
+    }
+}
+
+void display() {
+    if (isEmpty()) {
+        printf("Deque is empty\n");
+        return;
+    }
+
+    printf("Deque: ");
+    int i = front;
+
+    while (1) {
+        printf("%d ", deque[i]);
+        if (i == rear) break;
+        i = (i + 1) % MAX;
+    }
+
+    printf("\n");
+}
+
+int size() {
+    if (isEmpty()) return 0;
+    return (rear - front + MAX) % MAX + 1;
+}
+
+int main() {
+    int choice, x;
+
+    while (1) {
+        printf("\n--- Deque Menu ---\n");
+        printf("1. Push Front\n");
+        printf("2. Push Back\n");
+        printf("3. Pop Front\n");
+        printf("4. Pop Back\n");
+        printf("5. Get Front\n");
+        printf("6. Get Rear\n");
+        printf("7. Display\n");
+        printf("8. Size\n");
+        printf("9. Exit\n");
+
+        printf("Enter choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("enter value:");
+                scanf("%d", &x);
+                push_front(x);
+                break;
+            case 2:
+                printf("enter value:");
+                scanf("%d", &x);
+                push_back(x);
+                break;
+            case 3:
+                pop_front();
+                break;
+            case 4:
+                pop_back();
+                break;
+            case 5:
+                get_front();
+                break;
+            case 6:
+                get_rear();
+                break;
+            case 7:
+                display();
+                break;
+            case 8:
+                printf("Size: %d\n", size());
+                break;
+            case 9:
+                return 0;
+            default:
+                printf("Invalid choice\n");
+        }
+    }
+}
