@@ -64,5 +64,5 @@ To build strong fundamentals in Data Structures and Algorithms.
 35. queue using array
 36. Circular Queue Using Array
 37. Priority Queue using Array
-38. queue operations
+38. deque operations
 
